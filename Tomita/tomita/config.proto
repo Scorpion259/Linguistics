@@ -1,0 +1,23 @@
+encoding "utf8";
+
+TTextMinerConfig {
+	Dictionary = "./tomita/dic.gzt";
+	PrettyOutput = "./tomita/pretty.html";
+	
+	Input = {
+		File = "./tomita/input.txt";
+	}
+
+	Output = {
+		File = "./tomita/output.txt";
+		Format = text;
+	}
+
+Articles = [
+		{ Name = "grammar" }
+	]
+
+Facts = [
+		{ Name = "Fact" }
+	]
+}

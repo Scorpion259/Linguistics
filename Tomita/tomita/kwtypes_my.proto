@@ -1,0 +1,6 @@
+import "base.proto";     
+import "articles_base.proto";
+
+message politicians : TAuxDicArticle {}
+
+message objects : TAuxDicArticle {}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>link</th>
+        <th>title</th>
+        <th>lead</th>
+        <th>rubric</th>
+        <th>full_text</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.link }}</td>
+          <td>{{ user.title }}</td>
+          <td>{{ user.lead }}</td>
+          <td>{{ user.rubric }}</td>
+          <td>{{ user.full_text }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+          null,
+          null,
+          null,
+          null,
+          null],
+      });
+    });
+  </script>
+{% endblock %}
